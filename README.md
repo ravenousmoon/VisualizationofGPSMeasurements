@@ -26,3 +26,10 @@
         </ul>
     </li>
 </ol>
+
+<p> <b>Передумови виконання:</b> для виконання лабораторної роботи необхідно запустити емулятор вимірювальної частини GPS. Емулятор надається у вигляді Docker-образу під назвою <b>iperekrestov/university/gps-emulation-service</b>. Щоб запустити емулятор, завантажуємо Docker-образ з Docker Hub:</p>
+<pre><code>docker pull iperekrestov/university:gps-emulation-service</code></pre>
+<p>Запускаємо Docker-контейнер за допомогою команди:</p>
+<pre><code>docker run --name gps-emulator -p 4001:4000 iperekrestov/university:gps-emulation-service</code></pre>
+<p>Ця команда відкриває порт <code>4001</code> на хост-машині, який відображається на порт <code>4000</code> всередині контейнера, для з'єднання з емульованою вимірювальною частиною GPS.</p>
+
